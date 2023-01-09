@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 /**
  * SpringSecurity需要的用户详情
+ * 用户+权限列表
  * Created by macro on 2018/4/26.
  */
 public class AdminUserDetails implements UserDetails {

@@ -94,8 +94,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService userDetailsService() {
         //获取登录用户信息
         return username -> {
+            //查找出用户
             UmsAdmin admin = adminService.getAdminByUsername(username);
             if (admin != null) {
+                //关联查询出权限列表
                 List<UmsPermission> permissionList = adminService.getPermissionList(admin.getId());
                 return new AdminUserDetails(admin,permissionList);
             }

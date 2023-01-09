@@ -16,6 +16,11 @@ public interface UmsAdminMapper {
 
     int insertSelective(UmsAdmin record);
 
+    /**
+     * 通过example查找用户
+     * @param example
+     * @return
+     */
     List<UmsAdmin> selectByExample(UmsAdminExample example);
 
     UmsAdmin selectByPrimaryKey(Long id);
