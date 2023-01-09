@@ -32,6 +32,7 @@ public class PmsBrandServiceImpl implements PmsBrandService {
     @Override
     public int updateBrand(Long id, PmsBrand brand) {
         brand.setId(id);
+        //update pms_brand SET name = ?, first_letter = ?, sort = ?, factory_status = ?, show_status = ?, product_count = ?, product_comment_count = ?, logo = ? where id = ?
         return brandMapper.updateByPrimaryKeySelective(brand);
     }
 

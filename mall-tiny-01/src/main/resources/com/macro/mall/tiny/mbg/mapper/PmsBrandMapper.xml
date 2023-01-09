@@ -147,6 +147,11 @@
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into pms_brand
+        /*
+        prefix="(" 前缀
+        suffix=")" 后缀
+        suffixOverrides="," 移除多余的后缀内容
+        */
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="name != null">
         name,
